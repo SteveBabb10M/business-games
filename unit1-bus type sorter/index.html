@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Business Sorter Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Sort the Businesses</h1>
+    <p class="subtitle">Drag each card into the correct category: <strong>Private</strong> or <strong>Voluntary</strong>.</p>
+
+    <section class="board">
+      <div class="pile" aria-label="Draggable items" role="list">
+        <!-- TIP: data-answer holds the correct category id -->
+        <div class="card" draggable="true" data-answer="private" role="listitem" tabindex="0">Tesco</div>
+        <div class="card" draggable="true" data-answer="voluntary" role="listitem" tabindex="0">Oxfam</div>
+        <div class="card" draggable="true" data-answer="private" role="listitem" tabindex="0">Apple</div>
+        <div class="card" draggable="true" data-answer="voluntary" role="listitem" tabindex="0">Age UK</div>
+      </div>
+
+      <div class="dropzones">
+        <div class="zone" id="private" data-zone="private" aria-describedby="private-help">
+          <h2>Private Sector</h2>
+          <p id="private-help" class="help">Businesses owned by individuals or shareholders</p>
+        </div>
+
+        <div class="zone" id="voluntary" data-zone="voluntary" aria-describedby="voluntary-help">
+          <h2>Voluntary Sector</h2>
+          <p id="voluntary-help" class="help">Charities & not-for-profit organisations</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="checkBtn">Check Answers</button>
+      <button id="resetBtn" class="secondary">Reset</button>
+      <div id="score" aria-live="polite" class="score" role="status"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
