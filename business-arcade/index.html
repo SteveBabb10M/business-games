@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Business Builder Arcade – Unit 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100%;
+        background: #111;
+    }
+    #game {
+        width: 100vw;
+        height: 100vh;
+    }
+    canvas {
+        display: block;
+        margin: 0 auto;
+    }
+</style>
+
+    <!-- Phaser 3 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.70.0/dist/phaser.js"></script>
+
+    <!-- Utility/Data scripts -->
+    <script src="utils.js"></script>
+    <script src="data.js"></script>
+
+    <!-- Scenes MUST load BEFORE main.js -->
+    <script src="scenes/BootScene.js"></script>
+    <script src="scenes/MenuScene.js"></script>
+    <script src="scenes/FunctionalDifficultyScene.js"></script>
+    <script src="scenes/EscapeRoomState.js"></script>
+    <script src="scenes/FunctionalMapScene.js"></script>
+    <script src="scenes/BusinessBuilderScene.js"></script>
+
+    <!-- ✅ ADD THESE ESCAPE ROOM SCENES -->
+    <script src="scenes/EscapeRoomMenuScene.js"></script>
+    <script src="scenes/EscapeRoomRoom1Scene.js"></script>
+    <script src="scenes/EscapeRoomRoom2Scene.js"></script>
+    <script src="scenes/EscapeRoomRoom3Scene.js"></script>
+    <script src="scenes/EscapeRoomRoom4Scene.js"></script>
+
+    <!-- Main game file -->
+    <script src="main.js"></script>
+
+</head>
+
+<body style="margin: 0; background: #111;">
+    <div id="game"></div>
+</body>
+</html>
